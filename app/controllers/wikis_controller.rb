@@ -1,4 +1,6 @@
 class WikisController < ApplicationController
+  before_action :authenticate_user!, :except => [:index]
+
   def index
     @wikis = Wiki.all
   end
@@ -9,11 +11,13 @@ class WikisController < ApplicationController
 
   def new
     @wiki = Wiki.new
+    authorize @wiki
   end
 
   def create
     @wiki = Wiki.new(wiki_params)
     @wiki.user = current_user
+    authorize @wiki
 
     if @wiki.save
       flash[:notice] = "Wiki was saved."
@@ -26,12 +30,14 @@ class WikisController < ApplicationController
 
   def edit
     @wiki = Wiki.find(params[:id])
+    authorize @wiki
   end
 
   def update
     @wiki = Wiki.find(params[:id])
     @wiki.assign_attributes(wiki_params)
     @wiki.user = current_user
+    authorize @wiki
 
     if @wiki.save
       flash[:notice] = "Wiki was updated."
