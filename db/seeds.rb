@@ -1,3 +1,5 @@
+require 'random_data'
+
 10.times do
   User.create!(
   email:    Faker::Internet.email,
@@ -11,7 +13,8 @@ users = User.all
    Wiki.create!(
      user:   users.sample,
      title:  Faker::Food.measurement,
-     body:   Faker::Food.description
+     body:   Faker::Food.description,
+     private: RandomData.random_boolean
    )
  end
 
