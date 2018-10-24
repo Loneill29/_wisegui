@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   devise_for :users
 
+  resources :charges
+
   get 'about' => 'welcome#about'
 
   root 'welcome#index'
