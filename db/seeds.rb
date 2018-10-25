@@ -9,15 +9,22 @@ end
 
 users = User.all
 
-50.times do
+25.times do
    Wiki.create!(
      user:   users.sample,
      title:  Faker::Food.measurement,
      body:   Faker::Food.description,
-     private: RandomData.random_boolean
+     private: false
    )
  end
-
+ 25.times do
+    Wiki.create!(
+      user:   users.sample,
+      title:  "Private",
+      body:   Faker::Food.description,
+      private: true
+    )
+  end
  wikis = Wiki.all
 
  puts "Seed finished"

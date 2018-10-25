@@ -2,10 +2,10 @@ class WikisController < ApplicationController
   before_action :authenticate_user!, :except => [:index]
 
   def index
-    if current_user.standard?
-      @wikis = Wiki.where(private: false)
-    else
+    if current_user && current_user.premium? || current_user && current_user.admin?
       @wikis = Wiki.all
+    else
+      @wikis = Wiki.where(private: false)
     end
   end
 
