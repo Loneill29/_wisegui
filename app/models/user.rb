@@ -1,7 +1,8 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  has_many :wikis
+  has_many :wikis, dependent: :destroy
+  has_many :collaborators, dependent: :destroy
 
   before_save { self.email = email.downcase if email.present? }
   after_initialize :initialize_role
