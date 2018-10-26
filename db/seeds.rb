@@ -12,16 +12,16 @@ users = User.all
 25.times do
    Wiki.create!(
      user:   users.sample,
-     title:  Faker::Food.measurement,
-     body:   Faker::Food.description,
+     title:  RandomData.random_sentence,
+     body:   RandomData.random_paragraph,
      private: false
    )
  end
  25.times do
     Wiki.create!(
       user:   users.sample,
-      title:  "Private",
-      body:   Faker::Food.description,
+      title:  "PRIVATE #{RandomData.random_word}",
+      body:   RandomData.random_paragraph,
       private: true
     )
   end
