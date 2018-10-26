@@ -27,7 +27,7 @@ class WikisController < ApplicationController
       flash[:notice] = "Wiki was saved."
       redirect_to @wiki
     else
-      flash.now[:alert] = "There was an error saving the wiki. Please try again."
+      flash[:alert] = "There was an error saving the wiki. Please try again."
       render :new
     end
   end
@@ -47,7 +47,7 @@ class WikisController < ApplicationController
       flash[:notice] = "Wiki was updated."
       redirect_to @wiki
     else
-      flash.now[:alert] = "There was an error updating the wiki. Please try again."
+      flash[:alert] = "There was an error updating the wiki. Please try again."
       render :new
     end
   end
@@ -59,7 +59,7 @@ class WikisController < ApplicationController
       flash[:notice] = "\"#{@wiki.title}\" was deleted successfully."
       redirect_to wikis_path
     else
-      flash.now[:alert] = "There was an error deleting the wiki."
+      flash[:alert] = "There was an error deleting the wiki."
       render :show
     end
   end
