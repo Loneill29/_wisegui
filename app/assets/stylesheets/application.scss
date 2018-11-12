@@ -16,9 +16,27 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
+body {
+  background: #D8E2D8;
+}
+
  .nav {
    border: 0px;
    margin-bottom: 40px;
+ }
+
+ .jumbotron {
+   margin-top: 120px;
+   background: #AAC0AA!important;
+   color: #ffff!important;
+ }
+
+ .title {
+   text-align: center!important;
+ }
+
+ .home {
+   color: #4E584E;
  }
 
  .sign-in {
