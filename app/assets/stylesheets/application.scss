@@ -17,28 +17,137 @@
  @import "bootstrap";
 
 body {
-  background: #D8E2D8;
+  background: #ffff;
+  font-family: sans-serif;
+  color: #222222;
 }
 
- .nav {
-   border: 0px;
+.nav {
+   padding-top: 20px;
+   border-bottom: 1px solid #000000;
    margin-bottom: 40px;
  }
 
- .jumbotron {
-   margin-top: 120px;
-   background: #AAC0AA!important;
-   color: #ffff!important;
- }
+.col-md-8 {
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
 
- .title {
-   text-align: center!important;
- }
+.nav li:hover {
+  border-bottom: 1px solid #000000;
+}
 
- .home {
-   color: #4E584E;
- }
+.wisegui {
+  font-family: 'Crimson Text', serif;
+  font-weight: 700;
+}
 
- .sign-in {
-   padding-right: 15px;
- }
+.wisegui-desc {
+  font-family: 'Crimson Text', serif;
+}
+
+.wisegui-nav a {
+  font-family: 'Crimson Text', serif;
+  color: #222222!important;
+  font-family: 600px;
+  margin-right: 20px!important;
+}
+
+.media a {
+  color: #222222!important;
+}
+
+.btn-default {
+  background-color: #36c;
+  border: 1px solid #ffff;
+  box-shadow: 0 0 0 2px #36c;
+  color: #ffff!important;
+  border-radius: 2px!important;
+}
+
+.btn-default:hover {
+  background-color: #ffff;
+  border: 1px solid #36c;
+  color: #36c!important;
+  border-radius: 2px!important;
+}
+
+.btn-delete {
+  background-color: #ffff;
+  border: 2px solid #36c;
+  color: #36c;
+  border-radius: 2px;
+  margin-left: 10px;
+}
+
+.btn-collab {
+  margin-left: 10px;
+}
+
+.checkbox {
+  padding-left: 20px;
+}
+
+.btn-delete:hover {
+  background-color: #36c!important;
+  border: 2px solid #36c!important;
+  color: #ffff!important;
+}
+
+.w, .i {
+  font-size: 75px;
+  font-weight: 600;
+}
+
+.i {
+  margin-left: 2px;
+}
+
+a {
+  color: #36c!important;
+}
+
+i {
+  margin-right: 10px;
+  color: #36c;
+}
+
+.jumbotron {
+  margin-top: 120px;
+  background: url('puzzle.jpg') bottom no-repeat;
+  background-size: cover;
+  box-shadow: 1px 1px 8px #696767;
+  text-shadow: 1px 2px 2px #ccc;
+}
+
+.home-pg {
+  text-align: center;
+}
+.title {
+  text-align: center!important;
+}
+
+.sign-in {
+  padding-right: 70px;
+  padding-top: 30px;
+}
+
+@media (max-width: 767px) {
+  .w, .i {
+    font-size: 42px
+  }
+  .col-md-8 {
+    width: 100%!important;
+    margin-left: 0!important;
+    margin-right: 0!important;
+  }
+}
+
+@media (max-width: 991px) {
+  .col-md-8 {
+    width: 90%!important;
+    margin-left: 5%!important;
+    margin-right: 5%!important;
+  }
+}

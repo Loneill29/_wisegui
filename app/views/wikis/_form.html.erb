@@ -1,6 +1,6 @@
 <%= form_for @wiki do |f| %>
   <% if wiki.errors.any? %>
-    <div class="alert alert-danger">
+    <div class="alert alert-delete">
       <h4><%= pluralize(wiki.errors.count, "error") %>.</h4>
       <ul>
         <% wiki.errors.full_messages.each do |msg| %>
@@ -25,6 +25,6 @@
     </div>
   <% end %>
   <div class="form-group">
-    <%= f.submit "Save", class: 'btn btn-success' %>
+    <%= f.submit "Save", class: 'btn btn-default' %>
   </div>
 <% end %>

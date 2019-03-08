@@ -1,13 +1,20 @@
-<h1 class="title">
-  All Wikis
-  <%= link_to "New Wiki", new_wiki_path, class: 'btn btn-success' %>
-</h1>
-<% @wikis.each do |wiki| %>
+<div class="col-md-8">
+  <h1 class="title">
+    All Wikis
+  </h1>
+  <br>
+  <div class="new-wiki">
+    <%= link_to "New Wiki", new_wiki_path, class: 'btn btn-default' %>
+  </div>
+  <br>
+  <% @wikis.each do |wiki| %>
   <div class="media">
     <div class="media-body">
       <h4 class="media-heading">
         <%= link_to wiki.title, wiki %>
+        <hr>
       </h4>
     </div>
   </div>
-<% end %>
+  <% end %>
+</div>

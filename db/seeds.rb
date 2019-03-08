@@ -9,6 +9,12 @@ end
 
 users = User.all
 
+premium = User.create!(
+  email:    'premium2@email.com',
+  password: '000000',
+  role: 'premium'
+)
+
 25.times do
    Wiki.create!(
      user:   users.sample,
@@ -17,6 +23,7 @@ users = User.all
      private: false
    )
  end
+
  25.times do
     Wiki.create!(
       user:   users.sample,
