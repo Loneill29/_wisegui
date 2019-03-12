@@ -20,6 +20,8 @@ body {
   background: #ffff;
   font-family: sans-serif;
   color: #222222;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
 .nav {
@@ -29,9 +31,9 @@ body {
  }
 
 .col-md-8 {
-  width: 80%;
-  margin-left: 10%;
-  margin-right: 10%;
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 .nav li:hover {
@@ -52,6 +54,7 @@ body {
   color: #222222!important;
   font-family: 600px;
   margin-right: 20px!important;
+  margin-left: 30px;
 }
 
 .media a {
@@ -146,8 +149,8 @@ i {
 
 @media (max-width: 991px) {
   .col-md-8 {
-    width: 90%!important;
-    margin-left: 5%!important;
-    margin-right: 5%!important;
+    width: 70%!important;
+    margin-left: 15%!important;
+    margin-right: 15%!important;
   }
 }
