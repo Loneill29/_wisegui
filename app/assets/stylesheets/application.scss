@@ -131,6 +131,9 @@ i {
   background-size: cover;
   box-shadow: 1px 1px 8px #696767;
   text-shadow: 1px 2px 2px #ccc;
+  width: 90%;
+  margin-left: auto!important;
+  margin-right: auto!important;
 }
 
 .home-pg {
@@ -161,5 +164,34 @@ i {
     width: 70%!important;
     margin-left: 15%!important;
     margin-right: 15%!important;
+  }
+}
+
+//Devise//
+
+.password, .email, .remember-me {
+  margin-top: 10px;
+}
+
+.login input {
+  background: transparent!important;
+  border: none;
+}
+
+.login {
+  margin-top: 10px;
+}
+.signin {
+  margin-left: 50px!important;
+}
+
+.cancel {
+  margin-top: 10px;
+  background-color: #8696b7!important;
+  box-shadow: 0 0 0 2px #8696b7!important;
+}
+@media (max-width: 650px) {
+  .sign-in {
+    padding-right: 10px!important;
   }
 }
